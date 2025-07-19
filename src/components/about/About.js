@@ -1,8 +1,9 @@
 import React from 'react';
 import Style from './About.module.scss';
 import Terminal from "./Terminal";
-import {Box} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import {info} from "../../info/Info";
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 
 export default function About({innerRef}) {
@@ -49,11 +50,82 @@ export default function About({innerRef}) {
             </ul>
         </>;
     }
+    
+    function resumeText() {
+        return <>
+            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd resume</p>
+            <p><span style={{color: info.baseColor}}>resume <span
+                className={Style.green}>(main)</span> $</span> cat {firstName}_resume.pdf</p>
+            <p><span style={{color: info.baseColor}}>Opening resume from Google Drive...</span></p>
+            <Box display="flex" justifyContent="center" mt={2}>
+                <Button 
+                    variant="contained" 
+                    component="a" 
+                    href={info.resume} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    startIcon={<FileDownloadIcon />}
+                    sx={{
+                        backgroundColor: info.baseColor,
+                        color: '#fff',
+                        '&:hover': {
+                            backgroundColor: info.colors ? info.colors[1] : info.baseColor,
+                        },
+                        borderRadius: '20px',
+                        padding: '8px 16px',
+                        fontWeight: 'bold'
+                    }}
+                >
+                    View Resume
+                </Button>
+            </Box>
+        </>;
+    }
+
+    function educationText() {
+        return <>
+            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd
+                education</p>
+            <p><span style={{color: info.baseColor}}>education <span
+                className={Style.green}>(main)</span> $</span> ls</p>
+            <ul>
+                {info.education.map((edu, index) => (
+                    <li key={index}>
+                        <Box component={'span'} mr={'1rem'}>🎓</Box>
+                        <Box component={'span'} fontWeight={'bold'}>{edu.school}</Box>
+                        <Box component={'span'} display={'block'} ml={'2rem'}>{edu.degree} ({edu.year})</Box>
+                    </li>
+                ))}
+            </ul>
+        </>;
+    }
+
+    function experienceText() {
+        return <>
+            <p><span style={{color: info.baseColor}}>{firstName}{info.lastName.toLowerCase()} $</span> cd
+                experience</p>
+            <p><span style={{color: info.baseColor}}>experience <span
+                className={Style.green}>(main)</span> $</span> ls</p>
+            <ul>
+                {info.experience.map((exp, index) => (
+                    <li key={index}>
+                        <Box component={'span'} mr={'1rem'}>💼</Box>
+                        <Box component={'span'} fontWeight={'bold'}>{exp.role} @ {exp.company}</Box>
+                        <Box component={'span'} display={'block'} ml={'2rem'}>{exp.period}</Box>
+                        <Box component={'span'} display={'block'} ml={'2rem'} fontStyle={'italic'}>{exp.description}</Box>
+                    </li>
+                ))}
+            </ul>
+        </>;
+    }
 
     return (
         <Box ref={innerRef} display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'3rem'} id={'about'}>
             <Terminal text={aboutMeText()}/>
+            <Terminal text={experienceText()}/>
             <Terminal text={skillsText()}/>
+            <Terminal text={educationText()}/>
+            <Terminal text={resumeText()}/>
             <Terminal text={miscText()}/>
         </Box>
     )
