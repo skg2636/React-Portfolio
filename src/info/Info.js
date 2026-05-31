@@ -30,20 +30,15 @@ export const info = {
   firstName: "Sandeep",
   lastName: "Kumar Gupta",
   initials: "SKG", // the example uses first and last, but feel free to use three or more if you like.
-  position: "a Full Stack Developer",
+  position: "a Software Engineer",
   selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
   gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
   baseColor: colors[0],
-  resume: "https://drive.google.com/file/d/1eDgvxvjQYtwZhbUQaoZpb2Kuc2Xrdnpr/view?usp=sharing", // Google Drive link to your resume
+  resume: "https://drive.google.com/file/d/1DVYGPHQmGf1Lsz5k14_giZSDeFFc4G-U/view?usp=sharing", // Google Drive link to your resume
   miniBio: [
-    // these are just some "tidbits" about yourself. You can look at mine https://paytonjewell.github.io/#/ for an example if you'd like
-    // {
-    //   emoji: "☕",
-    //   text: "fueled by coffee",
-    // },
     {
       emoji: "💼",
-      text: "SDE-1 at CSG",
+      text: "Software Engineer at CSG International",
     },
     {
       emoji: "📧",
@@ -51,11 +46,11 @@ export const info = {
     },
     {
       emoji: "📱",
-       text: "+91 8820019008",
+      text: "+91 8820019008",
     },
     {
       emoji: "🌎",
-      text: "based in the India",
+      text: "based in Howrah, India",
     },
   ],
   socials: [
@@ -80,41 +75,43 @@ export const info = {
       label: "linkedin",
     },
   ],
-  bio: "Hello! I'm Sandeep, a passionate Software Developer with over 2 years of experience in backend, automation, and full-stack development. I love building efficient, scalable solutions using Python, React, and cloud-native tools like Azure DevOps. From crafting GenAI-powered apps to streamlining operations with RPA, I thrive on solving real-world problems. Always curious and driven, I aim to create impactful tech that makes life easier.",
+  bio: "Hello! I'm Sandeep, a Software Engineer with 3 years of experience building backend platforms, enterprise automation systems, and AI-powered applications. I specialize in Python, FastAPI, Flask, Generative AI, RAG pipelines, and cloud deployment workflows. I'm passionate about designing scalable REST APIs, semantic search systems, and context-aware AI assistants that drive real operational impact.",
   skills: {
     proficientWith: [
       "Python",
-      "Flask",
       "FastAPI",
-      "Django",
+      "Flask",
       "React",
       "JavaScript",
-      "Git",
-      "GitHub",
-      "Azure DevOps",
-      "Linux",
-      "CI/CD Pipelines",
-      "SQL",
-      "PostgreSQL",
-      "NoSQL",
-      "Shell Scripting",
-      "Jira",
-      "Data Structures & Algorithms",
-      "OOP",
-      "Node.js",
-      "HTML/CSS",
-      "TypeScript",
-      "Express",
+      "REST APIs",
+      "Generative AI",
+      "RAG Pipelines",
+      "AWS Bedrock",
+      "OpenSearch",
+      "Elasticsearch",
       "ELK Stack",
+      "PostgreSQL",
+      "SQL",
+      "CI/CD Pipelines",
+      "Azure DevOps",
+      "AWS",
+      "Linux",
+      "NGINX",
+      "Git",
+      "HTML/CSS",
+      "JWT Authentication",
+      "SSO",
     ],
     exposedTo: [
-      "API Development",
-      "RPA",
-      "Machine Learning",
-      "Generative AI",
-      "Artificial Intelligence",
-      "DevOps",
-      "Cloud Computing",
+      "Vector Search",
+      "Prompt Engineering",
+      "Embeddings",
+      "Semantic Search",
+      "MCP Integrations",
+      "SSE",
+      "Async Processing",
+      "Kibana Dashboards",
+      "Incident Management",
       "Agile Methodologies",
     ],
   },
@@ -130,8 +127,8 @@ export const info = {
   ],
   education: [
     {
-      school: "Kalinga Institute of Industrial Technology",
-      degree: "B.Tech. in Computer Science and Engineering",
+      school: "KIIT University",
+      degree: "B.Tech. in Computer Science and Engineering | CGPA: 9.17",
       year: "2019-2023",
     },
     {
@@ -147,25 +144,18 @@ export const info = {
   ],
   experience: [
     {
-      role: "SDE - I",
-      company: "CSG",
+      role: "Software Engineer – Backend & AI Platforms",
+      company: "CSG International",
       period: "June 2023 – Present",
       description:
-        "Contributed to full-stack and RPA development using Python, React, and Azure DevOps. Built Generative AI-powered tools, enhanced CI/CD pipelines, and implemented system monitoring using the ELK stack.",
+        "Designed and developed AI-powered enterprise platforms for operations, incident management, and requirement analysis using Python, FastAPI, OpenSearch, and AWS Bedrock. Built RAG pipelines and semantic retrieval workflows that accelerated enterprise response generation by ~70%. Engineered incident resolution workflows across 1.5M+ tickets, automated ~250–300 hours of monthly manual effort, and designed ELK-based observability dashboards detecting ~90% of production incidents early.",
     },
     {
       role: "Software Developer Intern",
-      company: "CSG",
+      company: "CSG International",
       period: "January 2023 – March 2023",
       description:
-        "Worked on SingleView product configuration and testing for telecom client projects. Gained hands-on experience in Agile methodologies and backend systems.",
-    },
-    {
-      role: "Full-Stack Developer Intern",
-      company: "EpikInDiFi",
-      period: "January 2022 – June 2022",
-      description:
-        "Trained in full-stack web development with a focus on Linux, data science, and EDA. Built components and backend APIs as part of real-world projects.",
+        "Trained in enterprise product configuration, testing workflows, and Agile development methodologies. Contributed to telecom domain projects and internal engineering workflows.",
     },
   ],
   portfolio: [
